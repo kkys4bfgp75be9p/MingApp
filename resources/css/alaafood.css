@@ -1,0 +1,370 @@
+/**
+        * Example of an initial loading indicator.
+        * It is recommended to keep this as minimal as possible to provide instant feedback
+        * while other resources are still being loaded for the first time
+        */
+html, body {
+    height: 100%;
+    background-color: #1985D0
+}
+
+#appLoadingIndicator {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    -webkit-animation-name: appLoadingIndicator;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+}
+
+#appLoadingIndicator > * {
+    background-color: #FFFFFF;
+    display: inline-block;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    margin: 0 5px;
+    width: 30px;
+    opacity: 0.8;
+}
+
+@-webkit-keyframes appLoadingIndicator {
+    0% {
+        opacity: 0.8
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0.8
+    }
+}
+
+div.menubackbutton {
+    height: 48px;
+    width: 48px;
+    display: block;
+    background-image: url(data:image/png;base64,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);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #fff;
+}
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.eot');
+    src: url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.eot?iefix') format('eot'),
+    url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.woff') format('woff'),
+    url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.ttf') format('truetype'),
+    url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.svg#webfont6hibqX7I') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div.category-container-body {
+    background-color: #d0d6db;
+    background-image: url('../images/header.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+div.main-category {
+    height:47px;
+    background-repeat: no-repeat no-repeat;
+    //border-radius: 4px;
+    -webkit-box-shadow: 0 2px 8px gray;
+    box-shadow: 1px 2px 6px gray;
+    //margin: 10px 0px;
+    background-color: #f5f5f5;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 9px;
+}
+
+
+div.category-menu-icon{
+    background-position: 10px 7px, 50% 50%;
+    background-image: url('http://maps.google.com/mapfiles/kml/pal2/icon32.png'), -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgb(230, 230, 230)));
+}
+
+div.category-map-icon{
+    background-position: 14px 7px, 50% 50%;
+    background-image: url('http://www.google.com/mapfiles/arrow.png'), -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgb(230, 230, 230)));
+}
+
+div.category-newsletter-icon{
+    background-position: 10px 7px, 50% 50%;
+    background-image: url('http://maps.google.com/mapfiles/kml/pal2/icon6.png'), -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgb(230, 230, 230)));
+}
+
+div.category-reserve-icon{
+    background-position: 10px 7px, 50% 50%;
+    background-image: url('http://maps.google.com/mapfiles/kml/pal3/icon55.png'), -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgb(230, 230, 230)));
+}
+/*div.category-pressed div.main-category{*/
+    /*background-image: none;*/
+    /*-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+    /*background-color: #d0d0d0;*/
+    /**/
+/*}*/
+
+
+div.category-pressed  div.category-goto-icon{
+    background-position: -12px -40px;
+
+}
+
+div.category-value {
+    float: left;
+    line-height: 31px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+
+div.category-goto-icon{
+    background-image: url('../icons/button_circle.png');
+    background-position: -12px -3px;
+    background-repeat: no-repeat;
+    height: 33px;
+    width: 33px;
+    float: right;
+}
+
+/**
+index bar
+**/
+
+div.highlight {
+    background-color: greenyellow;
+}
+
+
+
+
+
+/**
+menu list
+**/
+
+div.menu-header > div{
+    background-repeat: no-repeat;
+    background-size: 20px;
+    color: #fff;
+    padding-left: 27px;
+    /*color: #fff;*/
+    /*text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;*/
+    /*font: 'ChunkFiveRegular';*/
+}
+
+
+div.menu-header-r1_cat1 > div{
+    background-image: url('../category/r1-cat1.png');
+}
+
+div.menu-header-r1_cat2 > div{
+    background-image: url('../category/r1-cat2.png');
+}
+
+div.menu-header-r1_cat3 > div{
+    background-image: url('../category/r1-cat3.png');
+}
+
+div.menu-header-r1_cat4 > div{
+    background-image: url('../category/r1-cat4.png');
+}
+
+div.menu-header-r1_cat5 > div{
+    background-image: url('../category/r1-cat5.png');
+}
+
+div.menu-header-r1_cat6 > div{
+    background-image: url('../category/r1-cat6.png');
+}
+
+/*div.indexbar-r1-cat1{*/
+    /*background-image: url('../category/pizza.png');*/
+    /*background-repeat: no-repeat;*/
+    /*height: 40px;*/
+    /*width:40px*/
+/*}*/
+
+/*div.indexbar-r1-cat2{*/
+    /*background-image: url('../category/Steak.png');*/
+    /*background-repeat: no-repeat;*/
+    /*height: 40px;*/
+    /*width:40px*/
+/*}*/
+/*div.indexbar-r1-cat3{*/
+    /*background-image: url('../category/crawfish.png');*/
+    /*background-repeat: no-repeat;*/
+    /*height: 40px;*/
+    /*width:40px*/
+/*}*/
+
+/*div.indexbar-r1-cat4{*/
+    /*background-image: url('../category/Cake 6.png');*/
+    /*background-repeat: no-repeat;*/
+    /*height: 40px;*/
+    /*width:40px*/
+/*}*/
+
+/*div.indexbar-r1-cat5{*/
+    /*background-image: url('../category/beer.png');*/
+    /*background-repeat: no-repeat;*/
+    /*height: 40px;*/
+    /*width:40px*/
+/*}*/
+
+/*div.indexbar-r1-cat6{*/
+    /*background-image: url('../category/wine.png');*/
+    /*background-repeat: no-repeat;*/
+    /*height: 40px;*/
+    /*width:40px*/
+/*}*/
+
+
+div.dish {
+    height: 75px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 8px gray;
+    box-shadow: 1px 2px 6px gray;
+    background-color: #f5f5f5;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 9px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(rgb(230, 230, 230)));
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+div.dich-name{
+    float: left;
+}
+
+div.dich-icon{
+    float: right;
+    height: 76px;
+    width: 114px;
+    margin-top: -31px;
+
+    background-image: url('../icons/button_circle.png');
+    background-position: -12px -3px;
+    background-repeat: no-repeat;
+}
+
+div.dich-price{
+    float: left;
+    clear: both;
+}
+
+div.dich-r1-cat1-dish1{
+    background-image: url('../dishs/seafoodstew.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+div.dich-r1-cat1-dish2{
+    background-image: url('../dishs/seafoodstew.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -76px;
+}
+
+div.dich-r1-cat1-dish3{
+    background-image: url('../dishs/seafoodstew.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -152px;
+}
+
+div.dich-r1-cat1-dish4{
+    background-image: url('../dishs/seafoodstew.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -228px;
+}
+
+div.dich-r1-cat1-dish5{
+    background-image: url('../dishs/seafoodstew.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -304px;
+}
+
+
+
+
+
+
+/**
+carousel view
+**/
+
+div.r1-cat1-dish1{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100%;
+}
+
+div.r1-cat1-dish1 div.x-html{
+    background-image: url('../icons/chili.png');
+    background-repeat: no-repeat;
+    background-position: 97% 1%;
+    background-size: 24px 24px;
+}
+
+
+div.r1-cat1-dish2{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -532px;
+    background-size: 100%;
+}
+
+div.r1-cat2-dish1{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -1064px;
+    background-size: 100%;
+}
+
+div.r1-cat2-dish2{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -1064px;
+    background-size: 100%;
+}
+
+div.r1-cat3-dish1{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -1596px;
+    background-size: 100%;
+}
+div.r1-cat3-dish2{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -2128px;
+    background-size: 100%;
+}
+
+div.r1-cat3-dish3{
+    background-image: url('../images/pizza.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -2660px;
+    background-size: 100%;
+}
+
+div.carousel-item-info{
+    opacity: 0.9;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(221,221,221,1)), color-stop(50%,rgba(221,221,221,0.01)), color-stop(100%,rgba(221,221,221,1)));
+    position:absolute;
+    box-shadow: 4px 4px 14px #fff;
+    border-radius: 2px;
+    padding: 10px 15px;
+    color: #eff;
+}
