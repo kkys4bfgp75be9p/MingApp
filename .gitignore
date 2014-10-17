@@ -3,4 +3,4 @@ build/*
 .idea/*
 .sencha/*
 
-
+resources/sass/.sass-cache/*

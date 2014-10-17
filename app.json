@@ -72,11 +72,7 @@
      */
     "css": [
         {
-          "path": "resources/css/ming-app.css",
-          "update": "delta"
-        },
-        {
-          "path": "resources/css/alaafood.css",
+          "path": "resources/css/app.css",
           "update": "delta"
         }
     ],
@@ -104,8 +100,7 @@
             "/resources/category/r1-cat5.png",
             "/resources/category/r1-cat6.png",
 
-            "/resources/css/ming-app.css",
-            "/resources/css/alaafood.css"
+            "/resources/css/app.css"
         ],
         /**
          * List of items in the NETWORK section

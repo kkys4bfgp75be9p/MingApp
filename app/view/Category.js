@@ -3,8 +3,7 @@ Ext.define("MingApp.view.Category", {
   xtype:"category",
   requires:[
     "MingApp.view.CatToolbar",
-    "MingApp.view.CatDataview",
-    "MingApp.util.Performance"
+    "MingApp.view.CatDataview"
   ],
 
 
@@ -22,7 +21,7 @@ Ext.define("MingApp.view.Category", {
       {
         xtype:"catdataview",
         id: "catdataview",
-        padding: "100 10 50 10",
+        padding: "10",
         tpl : '<div class="main-category {iconid}"><div class="category-value">{value}</div><div class="category-goto-icon"></div></div>',
         store:{
           fields:['category', 'value', 'iconid'],
@@ -42,10 +41,6 @@ Ext.define("MingApp.view.Category", {
             {
               value:"newsletter",
               iconid: "category-newsletter-icon"
-            }
-            ,{
-              value: "performance",
-              iconid: "category-performance-icon"
             }
           ]
         }

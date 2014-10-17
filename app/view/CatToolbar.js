@@ -10,7 +10,6 @@ Ext.define("MingApp.view.CatToolbar", {
         id:"languageselectbox",
         name:"language",
         value:"german",
-        width:120,
         options:[
           {
             text:"English",

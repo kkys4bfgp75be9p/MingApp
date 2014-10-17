@@ -63,11 +63,11 @@ Ext.define('MingApp.view.Main', {
       {
         xtype: "reserveform",
         id: "reserveform"
-      },
-      {
-        xtype : "component",
-        id: "performance"
       }
+//      ,{
+//        xtype : "component",
+//        id: "performance"
+//      }
     ]
   }
 });

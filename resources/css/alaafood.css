@@ -2,12 +2,12 @@
         * Example of an initial loading indicator.
         * It is recommended to keep this as minimal as possible to provide instant feedback
         * while other resources are still being loaded for the first time
-        */
+
 html, body {
     height: 100%;
     background-color: #1985D0
 }
-
+*/
 #appLoadingIndicator {
     position: absolute;
     top: 50%;
@@ -55,32 +55,25 @@ div.menubackbutton {
     background-color: #fff;
 }
 
-@font-face {
-    font-family: 'ChunkFiveRegular';
-    src: url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.eot');
-    src: url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.eot?iefix') format('eot'),
-    url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.woff') format('woff'),
-    url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.ttf') format('truetype'),
-    url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.svg#webfont6hibqX7I') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/*@font-face {*/
+    /*font-family: 'ChunkFiveRegular';*/
+    /*src: url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.eot');*/
+    /*src: url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.eot?iefix') format('eot'),*/
+    /*url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.woff') format('woff'),*/
+    /*url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.ttf') format('truetype'),*/
+    /*url('http://www.midwinter-dg.com/blog_demos/css-text-shadows/fonts/chunkfive-webfont.svg#webfont6hibqX7I') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
 
-}
+/*}*/
 
-div.category-container-body {
-    background-color: #d0d6db;
-    background-image: url('../images/header.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-}
+
 
 div.main-category {
     height:47px;
     background-repeat: no-repeat no-repeat;
-    //border-radius: 4px;
     -webkit-box-shadow: 0 2px 8px gray;
     box-shadow: 1px 2px 6px gray;
-    //margin: 10px 0px;
     background-color: #f5f5f5;
     padding-left: 50px;
     padding-right: 50px;
