@@ -5,8 +5,6 @@ Ext.define("MingApp.view.Category", {
     "MingApp.view.CatToolbar",
     "MingApp.view.CatDataview"
   ],
-
-
   config:{
     layout:"fit",
     baseCls: "category-container-body",

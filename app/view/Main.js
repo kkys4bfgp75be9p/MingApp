@@ -6,7 +6,8 @@ Ext.define('MingApp.view.Main', {
     "MingApp.view.Category",
     "MingApp.view.MenuList",
     "MingApp.view.CarouselContainer",
-    "MingApp.view.MapContainer"
+    "MingApp.view.MapContainer",
+    'MingApp.ux.Button'
   ],
 
 
@@ -18,22 +19,24 @@ Ext.define('MingApp.view.Main', {
 
     items:[
       {
-        xtype:"button",
-        iconCls:'arrow_left',
+        xtype:'mbutton',
         id:'backbutton',
         hidden: true,
-        iconMask:true,
-        left:5,
-        top: 5
+        width: 64,
+        height:64,
+        left:20,
+        top:5,
+        text:"a"
       },
       {
-        xtype:"button",
-        iconCls:'home',
+        xtype:'mbutton',
         id:'homebutton',
         hidden: true,
-        iconMask:true,
-        left:50,
-        top:5
+        width: 64,
+        height:64,
+        left:100,
+        top:5,
+        text:'b'
       },
       {
         xtype:"button",

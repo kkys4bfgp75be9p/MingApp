@@ -47,7 +47,7 @@ Ext.define("MingApp.controller.Main", {
 
     if (activeItem) {
       id = activeItem.getId();
-    }
+    };
 
     switch (id) {
       case "carouselcontainer":
