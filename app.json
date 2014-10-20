@@ -73,7 +73,7 @@
     "css": [
         {
           "path": "resources/css/app.css",
-          "update": "delta"
+          "update": "full"
         }
     ],
 

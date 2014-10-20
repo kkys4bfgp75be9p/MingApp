@@ -7,7 +7,8 @@ Error: File to import not found or unreadable: sencha-touch/base.
 1: @import 'sencha-touch/base';
 2: @import 'sencha-touch/base/all';
 3: 
-4: @import 'ming-app';
+4: @import 'button';
+5: @import 'category';
 
 Backtrace:
 app.scss:1
@@ -53,4 +54,4 @@ app.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: sencha-touch/base.\A        Load paths:\A          \A         on line 1 of app.scss\A \A 1: @import 'sencha-touch/base';\A 2: @import 'sencha-touch/base/all';\A 3: \A 4: @import 'ming-app';"; }
+  content: "Error: File to import not found or unreadable: sencha-touch/base.\A        Load paths:\A          \A         on line 1 of app.scss\A \A 1: @import 'sencha-touch/base';\A 2: @import 'sencha-touch/base/all';\A 3: \A 4: @import 'button';\A 5: @import 'category';"; }

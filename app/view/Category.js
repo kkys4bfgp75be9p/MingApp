@@ -19,27 +19,41 @@ Ext.define("MingApp.view.Category", {
       {
         xtype:"catdataview",
         id: "catdataview",
-        padding: "10",
-        tpl : '<div class="main-category {iconid}"><div class="category-value">{value}</div><div class="category-goto-icon"></div></div>',
+        baseCls:'card',
+        tpl : '<img class="card-img" src="{imgUrl}"><div class="category-value">{value}</div>',
         store:{
-          fields:['category', 'value', 'iconid'],
+          fields:['category', 'value', 'imgUrl','iconTextClass','iconText'],
           data:[
             {
-              value:"menu",
-              iconid: "category-menu-icon"
+              value: 'restaurant',
+              imgUrl: 'resources/cards/restaurant.jpg',
+              iconTextClass:'category-menu-icon-text',
+              iconText: 'Calipso Restaurant'
             },
             {
-              value:'map',
-              iconid: "category-map-icon"
+              value:'menu',
+              imgUrl: 'resources/cards/menu.jpg',
+              iconTextClass:'category-menu-icon-text',
+              iconText: 'Calipso Restaurant'
             },
             {
-              value:'reserve',
-              iconid: "category-reserve-icon"
-            },
-            {
-              value:"newsletter",
-              iconid: "category-newsletter-icon"
+              value:'newsletter',
+              imgUrl: 'resources/cards/news.jpg',
+              iconTextClass:'category-info-icon-text',
+              iconText: 'Hello world'
             }
+//            ,{
+//              value:'reserve',
+//              iconClass: 'category-reserve-icon',
+//              iconTextClass:'category-reserve-icon-text',
+//              iconText: 'Hello world'
+//            }
+//            ,{
+//              value:'map',
+//              iconClass: "category-map-icon",
+//              iconTextClass:'category-map-icon-text',
+//              iconText: 'Hello world'
+//            }
           ]
         }
       }

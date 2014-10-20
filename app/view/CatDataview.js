@@ -16,7 +16,6 @@ Ext.define("MingApp.view.CatDataview", {
 
   config:{
     pressedCls: "category-pressed",
-    padding:'100 40 100 40',
     disableSelection:true
   }
 

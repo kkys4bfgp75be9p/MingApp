@@ -4,3 +4,5 @@ build/*
 .sencha/*
 
 resources/sass/.sass-cache/*
+
+resources/cards/*
