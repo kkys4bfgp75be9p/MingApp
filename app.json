@@ -16,7 +16,7 @@
      * This value is needed when build to resolve your application's dependencies if it requires server-side resources
      * that are not accessible via file system protocol.
      */
-    "url": "http://www.alaafu.com/livemenu/index.html",
+    "url": "http://www.alaafu.com/mingapp/index.html",
 
     /**
      * List of all JavaScript assets in the right execution order.
@@ -88,7 +88,7 @@
             "index.html",
             "app.js",
             "app.json",
-
+            "/resources/cards/*",
             "/resources/images/header.png",
             "/resources/images/pizza.jpg",
             "/resources/dishs/seafoodstew.jpg",
@@ -118,6 +118,9 @@
      * Extra resources to be copied along when build
      */
     "resources": [
+      "resources/action",
+      "resources/media",
+      "resources/cards",
       "resources/category",
       "resources/dishs",
       "resources/images",

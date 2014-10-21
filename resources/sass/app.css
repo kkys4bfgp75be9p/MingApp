@@ -2,16 +2,18 @@
 Error: File to import not found or unreadable: sencha-touch/base.
        Load paths:
          
-        on line 1 of app.scss
+        on line 3 of app.scss
 
-1: @import 'sencha-touch/base';
-2: @import 'sencha-touch/base/all';
-3: 
-4: @import 'button';
-5: @import 'category';
+1: $font-family: 'RobotoDraft';
+2: 
+3: @import 'sencha-touch/base';
+4: @import 'sencha-touch/base/all';
+5: 
+6: @import 'button';
+7: @import 'category';
 
 Backtrace:
-app.scss:1
+app.scss:3
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/import_node.rb:66:in `rescue in import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/import_node.rb:45:in `import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -54,4 +56,4 @@ app.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: sencha-touch/base.\A        Load paths:\A          \A         on line 1 of app.scss\A \A 1: @import 'sencha-touch/base';\A 2: @import 'sencha-touch/base/all';\A 3: \A 4: @import 'button';\A 5: @import 'category';"; }
+  content: "Error: File to import not found or unreadable: sencha-touch/base.\A        Load paths:\A          \A         on line 3 of app.scss\A \A 1: $font-family: 'RobotoDraft';\A 2: \A 3: @import 'sencha-touch/base';\A 4: @import 'sencha-touch/base/all';\A 5: \A 6: @import 'button';\A 7: @import 'category';"; }

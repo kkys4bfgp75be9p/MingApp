@@ -56,9 +56,8 @@ Ext.define("MingApp.controller.Main", {
         break;
       case "performance":
       case "menu":
-      case "mapcontainer":
-      case "reserveform":
-      case "panorama":
+      case "restaurant":
+      case "newsletter":
         this.goBack2Category();
         break;
     }
@@ -115,15 +114,9 @@ Ext.define("MingApp.controller.Main", {
     homeButton.hide();
   },
 
-  hide360Button : function(){
-    var button360 = Ext.getCmp("360button");
-    button360.hide();
-  },
-
   hideAllButtons: function(){
     this.hideBackButton();
     this.hideHomeButton();
-    this.hide360Button();
   }
 
 });

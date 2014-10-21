@@ -38,35 +38,47 @@ Ext.define('MingApp.view.Main', {
         top:5,
         text:'b'
       },
-      {
-        xtype:"button",
-        iconCls:'favorites',
-        id:'360button',
-        hidden: true,
-        iconMask:true,
-        right:5,
-        top:5
-      },
+//      {
+//        xtype:"button",
+//        iconCls:'favorites',
+//        id:'360button',
+//        hidden: true,
+//        iconMask:true,
+//        right:5,
+//        top:5
+//      },
       {
         xtype:"category",
         id:"category"
+      },
+      {
+        xtype:'component',
+        id:'restaurant',
+        layout:"fit",
+        html:'<div>restaurant</div>'
       },
       {
         xtype:"menu",
         id:"menu"
       },
       {
+        xtype:'component',
+        id:'newsletter',
+        layout:'fit',
+        html:'<div>news letter</div>'
+      },
+      {
         xtype:"carouselcontainer",
         id:"carouselcontainer"
-      },
-      {
-        xtype:"mapcontainer",
-        id:"mapcontainer"
-      },
-      {
-        xtype: "reserveform",
-        id: "reserveform"
       }
+//      ,{
+//        xtype:"mapcontainer",
+//        id:"mapcontainer"
+//      },
+//      {
+//        xtype: "reserveform",
+//        id: "reserveform"
+//      }
 //      ,{
 //        xtype : "component",
 //        id: "performance"

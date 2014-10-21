@@ -2,9 +2,10 @@ Ext.define('MingApp.i18n.Language', {
   statics: {
     english: {
       map: "Map",
-      menu: "Menu",
-      newsletter: "Newsletter",
+      menu: '<div class="card-content"> <div>Menu</div><div class="card-content-padding-top">enjoy fresh food everyday!</div><div class="card-content-padding-top"><div class="facebook">facebook</div><div class="twitter">twitter</div></div></div>',
+      newsletter: '<div class="card-content"> <div>News</div><div class="card-content-padding-top">please try our new dish! Gong Bao chicken</div></div>',
       reserve: "Reserve Table",
+      restaurant:'<div class="card-content" > <div>Kaiserstrasse 171</div><div class="card-content-padding-top">60437 Frankfurt am Main</div><div class="card-content-padding-top">Tel: 069-23453</div></div>',
 
       R1_CAT1_DISH1: 'Lambs lettuce',
       R1_CAT1_DISH2: 'Tuna carpaccio',
@@ -40,9 +41,10 @@ Ext.define('MingApp.i18n.Language', {
 
     chinese: {
       map: "地图",
-      menu: "菜单",
-      newsletter: "新闻",
+      menu: '<div class="card-content"> <div>菜单</div><div class="card-content-padding-top">新鲜食材每天尝</div><div class="card-content-padding-top"><div class="facebook">facebook</div><div class="twitter">twitter</div></div></div> ',
+      newsletter: '<div class="card-content"> <div>新闻</div><div class="card-content-padding-top">本周新菜式： 宫保鸡丁套餐！</div></div>',
       reserve: "预订",
+      restaurant:'<div class="card-content" > <div>Kaiserstrasse 171</div><div class="card-content-padding-top">60437 法兰克福</div><div class="card-content-padding-top">电话: 069-23453</div></div>',
 
       R1_CAT1: '前餐',
       R1_CAT2: '汤',
@@ -78,9 +80,10 @@ Ext.define('MingApp.i18n.Language', {
 
     german: {
       map: "Standort",
-      menu: "Menü",
-      newsletter: "Newsletter",
+      menu: '<div class="card-content"> <div>Menü</div><div class="card-content-padding-top">Täglich fresch Essen!</div><div class="card-content-padding-top"><div class="media"><img src="resources/media/FB.png"><span>1000+ Personen gefällt das</span></div></div><div class="card-content-padding-top"><div class="media"><img src="resources/media/wx.png"><span>800+ Personen gefällt das</span></div></div><div class="action-button"></div></div>',
+      newsletter: '<div class="card-content"> <div>News</div><div class="card-content-padding-top">Probieren Sie unsere neue Gericht：GongBao Hahnchen Würfel!</div><div class="action-button"></div></div>',
       reserve: "Resevierung",
+      restaurant:'<div class="card-content" > <div>Kaiserstrasse 171</div><div class="card-content-padding-top">60437 Frankfurt am Main</div><div class="card-content-padding-top">Tel: 069-23453</div><div class="action-button"></div></div>',
 
       R1_CAT1_DISH1: 'Feldsalat',
       R1_CAT1_DISH2: 'Thunfisch Carpaccio',

@@ -8,9 +8,6 @@ Ext.define('MingApp.ux.Button', {
 
   initialize: function() {
     this.callParent();
-
-    this.element.setText(this.text);
-
     this.element.on({
       scope      : this,
       tap        : 'onTap',

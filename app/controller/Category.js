@@ -52,46 +52,41 @@ Ext.define("MingApp.controller.Category", {
     mapcontainer.setItems(items);
   },
 
-  onItemTap:function (view, index, target, record) {
-    var recordValue = record.get("value");
-    var main = Ext.getCmp('main');
+  onItemTap:function (view, index, target, record, e) {
+    var target = e.target;
+    if(Ext.get(target).hasCls('action-button')){
+      var recordValue = record.get("id");
+      var main = Ext.getCmp('main');
 
-    if (recordValue == "menu") {
+      if (recordValue == "menu") {
 
-      var  menu = Ext.getCmp('menu');
-      if (menu) {
-        this.showBackButton();
-        main.setActiveItem(menu);
-      }
-
-    } else if (recordValue == "map"){
-      var  mapcontainer = Ext.getCmp("mapcontainer");
-      if (mapcontainer) {
-        if(!mapcontainer.getAt(0)){
-           this.createMapItem4Container();
+        var  menu = Ext.getCmp('menu');
+        if (menu) {
+          this.showBackButton();
+          main.setActiveItem(menu);
         }
 
-        this.showBackButton();
-        this.show360Button();
-        main.setActiveItem(mapcontainer);
-      }
-    } else if (recordValue == "reserve"){
-      var reserveform = Ext.getCmp("reserveform");
-      if (reserveform) {
-        this.showBackButton();
-        main.setActiveItem(reserveform);
-      }
+      } else if(recordValue == 'restaurant'){
+        var restaurantContainer = Ext.getCmp('restaurant');
+        if(restaurantContainer){
+          this.showBackButton();
+          main.setActiveItem(restaurantContainer);
+        }
+      } else if (recordValue == "newsletter"){
+        var newsContainer = Ext.getCmp('newsletter');
+        if(newsContainer){
+          this.showBackButton();
+          main.setActiveItem(newsContainer);
+        }
 
-    }else if (recordValue == "newsletter"){
-
-
-    }else if (recordValue == "performance"){
-      var  performance = Ext.getCmp("performance");
-      if(performance){
-        var performanceTest = new MingApp.util.Performance();
-        performance.setHtml(performanceTest.logPerformance());
-        this.showBackButton();
-        main.setActiveItem(performance);
+      }else if (recordValue == "performance"){
+        var  performance = Ext.getCmp("performance");
+        if(performance){
+          var performanceTest = new MingApp.util.Performance();
+          performance.setHtml(performanceTest.logPerformance());
+          this.showBackButton();
+          main.setActiveItem(performance);
+        }
       }
     }
   },
