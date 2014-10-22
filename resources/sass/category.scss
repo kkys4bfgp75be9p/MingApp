@@ -9,6 +9,10 @@
   margin-left: 8px;
 }
 
+.card-item:last-child {
+  margin-bottom: 8px;
+}
+
 div.card-content {
   padding: 16px;
   font-size: 14px;
@@ -46,7 +50,7 @@ div.card-content .action-button {
 }
 
 .category-pressed .action-button{
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 //div.facebook{

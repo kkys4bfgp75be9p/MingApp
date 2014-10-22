@@ -5,12 +5,13 @@ Ext.define("MingApp.view.Menu", {
 
   config:{
     layout: 'fit',
+    style: 'background:white',
     items:[
       {
         xtype: 'menulist',
         id: 'menulist',
         fullscreen: false,
-        tpl: '<div class="dish"> <div class="dich-name">{nameId}</div>  <div class="dich-price">{price} €</div> <div class="dich-icon dich-{iconId}"></div> </div>'
+        tpl: '<div class="dish"><div class="dish-left"><h3 class="dish-name">{nameId}</h3>  <h4 class="dish-price">{price} €</h4> </div> <div class="dish-right"><img src="{iconId}"></div> </div>'
       }
     ]
   }

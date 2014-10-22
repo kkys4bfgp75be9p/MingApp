@@ -15,7 +15,7 @@ Ext.define("MingApp.view.MenuList", {
 
   config:{
     grouped:true,
-    indexBar:false,
+    //indexBar:false,
     disableSelection:true,
     store:{
       sorters:"nameId",
@@ -26,29 +26,29 @@ Ext.define("MingApp.view.MenuList", {
         'iconId'
       ],
       data:[
-        {nameId:'R1_CAT1_DISH1', price:"7.20", categoryId:'R1_CAT1', iconId: "r1-cat1-dish1"},
-        {nameId:'R1_CAT1_DISH2', price:"7.90", categoryId:"R1_CAT1", iconId: "r1-cat1-dish2"},
+        {nameId:'R1_CAT1_DISH1', price:"7.20", categoryId:'R1_CAT1', iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:'R1_CAT1_DISH2', price:"7.90", categoryId:"R1_CAT1", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
 
-        {nameId:"R1_CAT2_DISH1", price:"3.20", categoryId:"R1_CAT2", iconId: "r1-cat2-dish1"},
-        {nameId:"R1_CAT2_DISH2", price:"3.20", categoryId:"R1_CAT2", iconId: "r1-cat2-dish2"},
+        {nameId:"R1_CAT2_DISH1", price:"3.20", categoryId:"R1_CAT2", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT2_DISH2", price:"3.20", categoryId:"R1_CAT2", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
 
-        {nameId:"R1_CAT3_DISH1", price:"3.20", categoryId:"R1_CAT3", iconId: "r1-cat3-dish1"},
-        {nameId:"R1_CAT3_DISH2", price:"3.20", categoryId:"R1_CAT3", iconId: "r1-cat3-dish2"},
-        {nameId:"R1_CAT3_DISH3", price:"3.20", categoryId:"R1_CAT3", iconId: "r1-cat3-dish3"},
-        {nameId:"R1_CAT3_DISH4", price:"3.20", categoryId:"R1_CAT3", iconId: "r1-cat3-dish4"},
+        {nameId:"R1_CAT3_DISH1", price:"3.20", categoryId:"R1_CAT3", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT3_DISH2", price:"3.20", categoryId:"R1_CAT3", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT3_DISH3", price:"3.20", categoryId:"R1_CAT3", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT3_DISH4", price:"3.20", categoryId:"R1_CAT3", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
 
-        {nameId:"R1_CAT4_DISH1", price:"3.50", categoryId:"R1_CAT4", iconId: "r1-cat4-dish1"},
-        {nameId:"R1_CAT4_DISH2", price:"6.30", categoryId:"R1_CAT4", iconId: "r1-cat4-dish2"},
-        {nameId:"R1_CAT4_DISH3", price:"3.50", categoryId:"R1_CAT4", iconId: "r1-cat4-dish3"},
+        {nameId:"R1_CAT4_DISH1", price:"3.50", categoryId:"R1_CAT4", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT4_DISH2", price:"6.30", categoryId:"R1_CAT4", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT4_DISH3", price:"3.50", categoryId:"R1_CAT4", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
 
-        {nameId:"R1_CAT5_DISH1", price:"6.20", categoryId:"R1_CAT5", iconId: "r1-cat5-dish1"},
-        {nameId:"R1_CAT5_DISH2", price:"6.20", categoryId:"R1_CAT5", iconId: "r1-cat5-dish2"},
-        {nameId:"R1_CAT5_DISH3", price:"6.50", categoryId:"R1_CAT5", iconId: "r1-cat5-dish3"},
-        {nameId:"R1_CAT5_DISH4", price:"6.50", categoryId:"R1_CAT5", iconId: "r1-cat5-dish4"},
+        {nameId:"R1_CAT5_DISH1", price:"6.20", categoryId:"R1_CAT5", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT5_DISH2", price:"6.20", categoryId:"R1_CAT5", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT5_DISH3", price:"6.50", categoryId:"R1_CAT5", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT5_DISH4", price:"6.50", categoryId:"R1_CAT5", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
 
-        {nameId:"R1_CAT6_DISH1", price:"7.50", categoryId:"R1_CAT6", iconId: "r1-cat6-dish1"},
-        {nameId:"R1_CAT6_DISH2", price:"7.90", categoryId:"R1_CAT6", iconId: "r1-cat6-dish2"},
-        {nameId:"R1_CAT6_DISH3", price:"7.90", categoryId:"R1_CAT6", iconId: "r1-cat6-dish3"}
+        {nameId:"R1_CAT6_DISH1", price:"7.50", categoryId:"R1_CAT6", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT6_DISH2", price:"7.90", categoryId:"R1_CAT6", iconId: "https://material.angularjs.org/img/list/60.jpeg"},
+        {nameId:"R1_CAT6_DISH3", price:"7.90", categoryId:"R1_CAT6", iconId: "https://material.angularjs.org/img/list/60.jpeg"}
       ],
 
       grouper:{
@@ -62,11 +62,11 @@ Ext.define("MingApp.view.MenuList", {
 
 
   applyIndexBar:function () {
-
-    return Ext.factory({
-      //TODO find better way to do it.
-      groups:['R1_CAT1', 'R1_CAT2', 'R1_CAT3', 'R1_CAT4', 'R1_CAT5', 'R1_CAT6']
-    }, MingApp.ux.IndexBar, this.getIndexBar());
+    return null;
+//    return Ext.factory({
+//      //TODO find better way to do it.
+//      groups:['R1_CAT1', 'R1_CAT2', 'R1_CAT3', 'R1_CAT4', 'R1_CAT5', 'R1_CAT6']
+//    }, MingApp.ux.IndexBar, this.getIndexBar());
   },
 
   //fix bug if touch background of index bar.
@@ -125,7 +125,9 @@ Ext.define("MingApp.view.MenuList", {
 
         //highlight index bar
         var indexbar = this.getIndexBar();
-        indexbar.highlight(headerStringId);
+        if(indexbar != null){
+          indexbar.highlight(headerStringId);
+        }
       }
 
       if (pinnedHeader.$position != transY) {

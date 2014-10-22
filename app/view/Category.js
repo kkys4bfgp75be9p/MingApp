@@ -9,13 +9,13 @@ Ext.define("MingApp.view.Category", {
     layout:"fit",
     baseCls: "category-container-body",
     items:[
-      {
-        xtype:"cattoolbar",
-        left:0,
-        bottom:0,
-        height:40,
-        width:150
-      },
+//      {
+//        xtype:"cattoolbar",
+//        left:0,
+//        bottom:0,
+//        height:40,
+//        width:150
+//      },
       {
         xtype:"catdataview",
         id: "catdataview",

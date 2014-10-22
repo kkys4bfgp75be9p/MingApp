@@ -25,8 +25,10 @@ Ext.define("MingApp.controller.Main", {
     var currentIndex = carousel.getIndexBar().getCurrentIndex();
     var menuList = Ext.getCmp("menulist");
     var indexbar = menuList.getIndexBar();
+    if(indexbar != null){
+      indexbar.fireEvent('index', indexbar, currentIndex, indexbar);
+    }
 
-    indexbar.fireEvent('index', indexbar, currentIndex, indexbar);
   },
 
   goHome:function () {

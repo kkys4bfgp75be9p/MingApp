@@ -21,9 +21,9 @@
 }
 
 .x-indexbar-vertical {
-    width: 15px;
+    width: 32px;
     @include st-box-orient(vertical);
-    margin-right: 15px;
+    margin-right: 3px;
 }
 
 .x-indexbar-horizontal {
@@ -39,5 +39,8 @@
 }
 
 .x-indexbar-pressed {
-    background-color: #ccc;
+}
+
+.x-indexbar .highlight{
+  background-color: #eee;
 }

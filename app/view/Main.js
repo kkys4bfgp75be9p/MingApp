@@ -21,20 +21,22 @@ Ext.define('MingApp.view.Main', {
       {
         xtype:'mbutton',
         id:'backbutton',
+        cls:'back',
         hidden: true,
         width: 64,
         height:64,
-        left:20,
+        left:10,
         top:5,
         text:"a"
       },
       {
         xtype:'mbutton',
         id:'homebutton',
+        cls:'home',
         hidden: true,
         width: 64,
         height:64,
-        left:100,
+        left:85,
         top:5,
         text:'b'
       },

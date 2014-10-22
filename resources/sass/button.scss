@@ -118,16 +118,29 @@ div.paper-button {
   border: none;
   font-size: 24px;
   color: white;
-  background-color: #ff4081;
+  background-color: #40c4ff;
   border-radius: 50%;
   width: 56px;
   height: 56px;
   -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
   box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
+
+}
+
+.paper-button.paper-floating-action-button.back {
+  background-image: url("../action/back.png");
+  background-repeat: no-repeat;
+  background-position: 8px;
+}
+
+.paper-button.paper-floating-action-button.home {
+  background-image: url("../action/home.png");
+  background-repeat: no-repeat;
+  background-position: 8px;
 }
 
 .paper-button.paper-floating-action-button:hover {
-  background-color: #ff4060;
+  background-color: #40c4ff;
 }
 
 .paper-button.paper-floating-action-button.small {
