@@ -54,7 +54,7 @@ Ext.define("MingApp.controller.Category", {
 
   onItemTap:function (view, index, target, record, e) {
     var target = e.target;
-    if(Ext.get(target).hasCls('action-button')){
+    if(Ext.get(target).hasCls('card-content-right')){
       var recordValue = record.get("id");
       var main = Ext.getCmp('main');
 

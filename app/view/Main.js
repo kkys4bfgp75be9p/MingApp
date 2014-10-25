@@ -23,8 +23,8 @@ Ext.define('MingApp.view.Main', {
         id:'backbutton',
         cls:'back',
         hidden: true,
-        width: 64,
-        height:64,
+        width: 48,
+        height:48,
         left:10,
         top:5,
         text:"a"
@@ -34,9 +34,9 @@ Ext.define('MingApp.view.Main', {
         id:'homebutton',
         cls:'home',
         hidden: true,
-        width: 64,
-        height:64,
-        left:85,
+        width: 48,
+        height:48,
+        left:65,
         top:5,
         text:'b'
       },

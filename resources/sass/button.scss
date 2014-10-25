@@ -118,10 +118,10 @@ div.paper-button {
   border: none;
   font-size: 24px;
   color: white;
-  background-color: #40c4ff;
+  background-color: #ff8a65;
   border-radius: 50%;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
   box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
 
@@ -130,17 +130,17 @@ div.paper-button {
 .paper-button.paper-floating-action-button.back {
   background-image: url("../action/back.png");
   background-repeat: no-repeat;
-  background-position: 8px;
+  background-position: 7px;
 }
 
 .paper-button.paper-floating-action-button.home {
   background-image: url("../action/home.png");
   background-repeat: no-repeat;
-  background-position: 8px;
+  background-position: 7px;
 }
 
 .paper-button.paper-floating-action-button:hover {
-  background-color: #40c4ff;
+  background-color: #ff8a65;
 }
 
 .paper-button.paper-floating-action-button.small {

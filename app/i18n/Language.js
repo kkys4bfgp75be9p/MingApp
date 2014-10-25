@@ -80,10 +80,10 @@ Ext.define('MingApp.i18n.Language', {
 
     german: {
       map: "Standort",
-      menu: '<div class="card-content"> <div>Menü</div><div class="card-content-padding-top">Täglich fresch Essen!</div><div class="card-content-padding-top"><div class="media"><img src="resources/media/FB.png"><span>1000+ Personen gefällt das</span></div></div><div class="card-content-padding-top"><div class="media"><img src="resources/media/wx.png"><span>800+ Personen gefällt das</span></div></div><div class="action-button"></div></div>',
-      newsletter: '<div class="card-content"> <div>News</div><div class="card-content-padding-top">Probieren Sie unsere neue Gericht：GongBao Hahnchen Würfel!</div><div class="action-button"></div></div>',
+      menu: '<div class="card-content-left"> <div>Menü</div><div class="card-content-padding-top">Täglich fresch Essen!</div><div class="card-content-padding-top"><div class="media"><img src="resources/media/FB.png"><span>1000+ Personen gefällt das</span></div></div><div class="card-content-padding-top"><div class="media"><img src="resources/media/wx.png"><span>800+ Personen gefällt das</span></div></div></div><div class="card-content-right"></div>',
+      newsletter: '<div class="card-content-left"> <div>News</div><div class="card-content-padding-top news"><span>Probieren Sie unsere neue Gericht：GongBao Hahnchen Würfel!</span></div></div><div class="card-content-right"></div>',
       reserve: "Resevierung",
-      restaurant:'<div class="card-content" > <div>Kaiserstrasse 171</div><div class="card-content-padding-top">60437 Frankfurt am Main</div><div class="card-content-padding-top">Tel: 069-23453</div><div class="action-button"></div></div>',
+      restaurant:'<div class="card-content-left" > <div>Kaiserstrasse 171</div><div >60437 Frankfurt am Main</div><div class="card-content-padding-top tel">Tel: 069-23453</div></div><div class="card-content-right"></div>',
 
       R1_CAT1_DISH1: 'Feldsalat',
       R1_CAT1_DISH2: 'Thunfisch Carpaccio',
@@ -97,7 +97,7 @@ Ext.define('MingApp.i18n.Language', {
       R1_CAT3_DISH4: 'Forellenfilet',
 
       R1_CAT4_DISH1: 'Vanilleeins',
-      R1_CAT4_DISH2: 'Weisses Schokoladenmousse',
+      R1_CAT4_DISH2: 'Weisses Schokoladen mousse',
       R1_CAT4_DISH3: 'Organen Panna Cotta',
 
       R1_CAT5_DISH1: 'Mineralwasser',

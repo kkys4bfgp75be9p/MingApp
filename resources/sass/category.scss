@@ -15,8 +15,19 @@
 
 div.card-content {
   padding: 16px;
-  font-size: 14px;
   color: #444;
+}
+
+.card-content.res{
+  height: 120px;
+}
+
+.card-content.men{
+  height: 155px;
+}
+
+.card-content.new{
+  height: 120px;
 }
 
 div.card-content-padding-top {
@@ -29,28 +40,43 @@ img.card-img {
 }
 
 .media img{
-  vertical-align:middle;
+  vertical-align:bottom;
 }
 
 .media span{
   margin-left: 10px;
+  font-size: 12px;
 }
 
-div.card-content .action-button {
-  position: relative;
+.news span{
+  font-size: 12px;
+}
+
+.tel {
+  font-size: 12px;
+}
+
+div.card-content-left {
+  float: left;
+  height: 80px;
+  max-width: 75%;
+}
+
+div.card-content .card-content-right {
+  float: right;
   display: block;
-  left: 80%;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   background-image: url("../action/forward.png");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 32px;
+  background-color: #ff8a65;
 
 }
 
-.category-pressed .action-button{
-  background-color: #eee;
+.category-pressed .card-content-right{
+  background-color:#9e9e9e;
 }
 
 //div.facebook{

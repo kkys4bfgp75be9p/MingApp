@@ -13,6 +13,8 @@ Ext.define("MingApp.ux.CarouselItem", {
   },
 
   constructor:function (config) {
+    Ext.Viewport.on('orientationchange', 'handleOrientationChange', this, {buffer: 50 });
+
     this.callParent(arguments);
     this.innerElement.on({
       tap:function () {
@@ -63,21 +65,21 @@ Ext.define("MingApp.ux.CarouselItem", {
         }
       ];
 
-      if (navigator.onLine) {
-        items.push({
-          xtype:"component",
-          html:'<fb:like href="http://www.alaafu.com/livemenu/" send="false" layout="button_count" show_faces="false"></fb:like>',
-          cls:"",
-          left:10,
-          bottom:5
-        });
-      }
+//      if (navigator.onLine) {
+//        items.push({
+//          xtype:"component",
+//          html:'<fb:like href="http://www.alaafu.com/livemenu/" send="false" layout="button_count" show_faces="false"></fb:like>',
+//          cls:"",
+//          left:10,
+//          bottom:5
+//        });
+//      }
       var lastItem = this.add(items);
 
-      if (navigator.onLine) {
-        var facebookDom = Ext.getDom(lastItem.element);
-        FB.XFBML.parse(facebookDom);
-      }
+//      if (navigator.onLine) {
+//        var facebookDom = Ext.getDom(lastItem.element);
+//        FB.XFBML.parse(facebookDom);
+//      }
 
       infoElement = this.getAt(0);
       if (infoElement) {
@@ -93,5 +95,12 @@ Ext.define("MingApp.ux.CarouselItem", {
         item.show();
       }, 100);
     }
+  },
+
+  handleOrientationChange: function(com, newOrientation){
+    console.log(this);
+    console.log(newOrientation);
+
+
   }
 });

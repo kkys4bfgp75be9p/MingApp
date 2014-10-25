@@ -20,34 +20,31 @@ Ext.define("MingApp.view.Category", {
         xtype:"catdataview",
         id: "catdataview",
         baseCls:'card',
-        tpl : '<img class="card-img" src="{imgUrl}">{html}',
+        tpl : '<img class="card-img" src="{imgUrl}"><div class="card-content {contentCls}">{html}</div>',
         store:{
-          fields:['id', 'category', 'value', 'imgUrl','iconTextClass','iconText','html'],
+          fields:['id', 'category', 'value', 'imgUrl','contentCls', 'html'],
           data:[
             {
               id: 'restaurant',
               value: 'restaurant',
               imgUrl: 'resources/cards/restaurant.jpg',
-              iconTextClass:'category-menu-icon-text',
-              iconText: 'Calipso Restaurant',
-              html: 'restaurant'
+              html: 'restaurant',
+              contentCls: 'res'
             },
             {
               id:'menu',
               value:'menu',
               imgUrl: 'resources/cards/menu.jpg',
-              iconTextClass:'category-menu-icon-text',
-              iconText: 'Calipso Restaurant',
-              html: 'menu'
+              html: 'menu',
+              contentCls: 'men'
 
             },
             {
               id:'newsletter',
               value:'newsletter',
               imgUrl: 'resources/cards/news.jpg',
-              iconTextClass:'category-info-icon-text',
-              iconText: 'Hello world',
-              html: 'newsletter'
+              html: 'newsletter',
+              contentCls: 'new'
             }
 //            ,{
 //              value:'reserve',
