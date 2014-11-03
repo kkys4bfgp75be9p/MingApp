@@ -56,6 +56,9 @@ Ext.define("MingApp.controller.Main", {
         this.setMenuIndex();
         this.goBack2MenuList();
         break;
+      case "panorama":
+        this.goBack2Restaurant();
+        break;
       case "performance":
       case "menu":
       case "restaurant":
@@ -65,6 +68,16 @@ Ext.define("MingApp.controller.Main", {
     }
   },
 
+  goBack2Restaurant: function(){
+    var main = Ext.getCmp('main'),
+      restaurant = Ext.getCmp('restaurant');
+    if (restaurant) {
+      this.hideHomeButton();
+      var mapButton = Ext.getCmp("360button");
+      mapButton.show({type: "fade"});
+      main.animateActiveItem(restaurant, {type:'fade'});
+    }
+  },
 
   goBack2Category:function () {
     var main = Ext.getCmp('main'),
@@ -88,21 +101,17 @@ Ext.define("MingApp.controller.Main", {
   },
 
   changeView: function(){
-    var mapContainer = Ext.getCmp("mapcontainer");
-    var currentId = mapContainer.getActiveItem().getId();
-    if(currentId ==="map"){
-      var panorama = Ext.getCmp("panorama");
-      if (panorama) {
-        if(panorama.element.dom.children.length == 0){
-          embedpano({swf:"mobile.swf", xml:"mobile.xml", target:"panorama", html5:"always", passQueryParameters:false});
-        }
-        mapContainer.setActiveItem(panorama);
+    var main = Ext.getCmp('main'),
+      panorama = Ext.getCmp('panorama');
+    if (panorama) {
+      this.hide360Button();
+      var homeButton = Ext.getCmp("homebutton");
+      homeButton.show({type: "fade"});
+
+      if(!panorama.element.dom.hasChildNodes()){
+        initPanorama();
       }
-    } else if (currentId ==="panorama"){
-      var map = Ext.getCmp("map");
-      if(map){
-        mapContainer.animateActiveItem(map, {type:"slide",direction:"right"});
-      }
+      main.animateActiveItem(panorama, {type:'fade'});
     }
   },
 
@@ -116,9 +125,15 @@ Ext.define("MingApp.controller.Main", {
     homeButton.hide();
   },
 
+  hide360Button : function(){
+    var mapButton = Ext.getCmp("360button");
+    mapButton.hide();
+  },
+
   hideAllButtons: function(){
     this.hideBackButton();
     this.hideHomeButton();
+    this.hide360Button();
   }
 
 });

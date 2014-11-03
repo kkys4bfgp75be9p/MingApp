@@ -84,6 +84,7 @@ Ext.define('MingApp.i18n.Language', {
       newsletter: '<div class="card-content-left"> <div>News</div><div class="card-content-padding-top news"><span>Probieren Sie unsere neue Gericht：GongBao Hahnchen Würfel!</span></div></div><div class="card-content-right"></div>',
       reserve: "Resevierung",
       restaurant:'<div class="card-content-left" > <div>Kaiserstrasse 171</div><div >60437 Frankfurt am Main</div><div class="card-content-padding-top tel">Tel: 069-23453</div></div><div class="card-content-right"></div>',
+      map:'<div class="card-content-left" > <div>Kaiserstrasse 171</div><div >60437 Frankfurt am Main</div><div class="card-content-padding-top tel">Tel: 069-23453</div></div>',
 
       R1_CAT1_DISH1: 'Feldsalat',
       R1_CAT1_DISH2: 'Thunfisch Carpaccio',

@@ -40,6 +40,10 @@
      */
     "js": [
         {
+          "path":"panorama.js",
+          "x-bootstrap": true
+        },
+        {
             "path": "touch/sencha-touch.js",
             "x-bootstrap": true
         },
@@ -50,7 +54,7 @@
         {
             "path": "app.js",
             "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
-            "update": "delta"
+            "update": "full"
         }
     ],
 
@@ -88,10 +92,11 @@
             "index.html",
             "app.js",
             "app.json",
-            "/resources/cards/*",
-            "/resources/images/header.png",
-            "/resources/images/pizza.jpg",
-            "/resources/dishs/seafoodstew.jpg",
+            "/resources/cards/restaurant.jpg",
+            "/resources/cards/menu.jpg",
+            "/resources/cards/news.jpg",
+            "/resources/images/panorama.png",
+            "/resources/images/map.jpg",
 
             "/resources/category/r1-cat1.png",
             "/resources/category/r1-cat2.png",

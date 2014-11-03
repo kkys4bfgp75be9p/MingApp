@@ -70,6 +70,7 @@ Ext.define("MingApp.controller.Category", {
         var restaurantContainer = Ext.getCmp('restaurant');
         if(restaurantContainer){
           this.showBackButton();
+          this.show360Button();
           main.setActiveItem(restaurantContainer);
         }
       } else if (recordValue == "newsletter"){

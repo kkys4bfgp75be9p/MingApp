@@ -4,6 +4,8 @@ Ext.define('MingApp.view.Main', {
 
   requires:[
     "MingApp.view.Category",
+    "MingApp.view.Restaurant",
+    "MingApp.view.Panorama",
     "MingApp.view.MenuList",
     "MingApp.view.CarouselContainer",
     "MingApp.view.MapContainer",
@@ -26,8 +28,7 @@ Ext.define('MingApp.view.Main', {
         width: 48,
         height:48,
         left:10,
-        top:5,
-        text:"a"
+        top:5
       },
       {
         xtype:'mbutton',
@@ -37,8 +38,17 @@ Ext.define('MingApp.view.Main', {
         width: 48,
         height:48,
         left:65,
-        top:5,
-        text:'b'
+        top:5
+      },
+      {
+        xtype:'mbutton',
+        id:'360button',
+        cls:'panorama',
+        hidden: true,
+        width: 48,
+        height:48,
+        right:10,
+        top:5
       },
 //      {
 //        xtype:"button",
@@ -54,37 +64,40 @@ Ext.define('MingApp.view.Main', {
         id:"category"
       },
       {
-        xtype:'component',
+        xtype:'restaurant',
         id:'restaurant',
-        layout:"fit",
-        html:'<div>restaurant</div>'
+        layout:"fit"
+      },
+      {
+        xtype:'panorama',
+        id:'panorama',
+        layout:"fit"
       },
       {
         xtype:"menu",
         id:"menu"
       },
       {
-        xtype:'component',
+        xtype:'dataview',
         id:'newsletter',
         layout:'fit',
-        html:'<div>news letter</div>'
+        store: {
+          fields: ['name', 'age'],
+          data: [
+            {name: 'Jamie',  age: 100},
+            {name: 'Rob',   age: 21},
+            {name: 'Tommy', age: 24},
+            {name: 'Jacky', age: 24},
+            {name: 'Ed',   age: 26}
+          ]
+        },
+
+        itemTpl: '<div>{name} is {age} years old</div>'
       },
       {
         xtype:"carouselcontainer",
         id:"carouselcontainer"
       }
-//      ,{
-//        xtype:"mapcontainer",
-//        id:"mapcontainer"
-//      },
-//      {
-//        xtype: "reserveform",
-//        id: "reserveform"
-//      }
-//      ,{
-//        xtype : "component",
-//        id: "performance"
-//      }
     ]
   }
 });

@@ -680,7 +680,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "MingApp.view.MapContainer": [],
   "MingApp.view.Menu": [],
   "MingApp.view.MenuList": [],
-  "MingApp.view.Reserve": []
+  "MingApp.view.Panorama": [],
+  "MingApp.view.Reserve": [],
+  "MingApp.view.Restaurant": []
 });
 
 Ext.ClassManager.addNameAliasMappings({
@@ -1447,8 +1449,14 @@ Ext.ClassManager.addNameAliasMappings({
   "MingApp.view.MenuList": [
     "widget.menulist"
   ],
+  "MingApp.view.Panorama": [
+    "widget.panorama"
+  ],
   "MingApp.view.Reserve": [
     "widget.reserveform"
+  ],
+  "MingApp.view.Restaurant": [
+    "widget.restaurant"
   ]
 });
 
